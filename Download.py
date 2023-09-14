@@ -11,7 +11,7 @@ def Download(start, account, password, end=None, hostname=None, port=None):
 
     for i in range(start, end + 1):
         print('\033[92m' + ("Download " + str(i)).center(100, '=') + '\033[0m')
-        data_Path = "/home/datacode/Files/" + str(i)
+        data_Path = "path" + str(i)
         stdin, stdout, stderr = ssh.exec_command("cd " + data_Path + ";ls")
         studen_list = stdout.read().decode('utf-8').split('\n')
 
